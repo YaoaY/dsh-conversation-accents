@@ -5,7 +5,7 @@
   "author": "dsh-conversation-accents contributors",
   "repository": {
     "type": "git",
-    "url": "https://github.com/YaoaY/dsh-conversation-accents.git"
+    "url": "git+https://github.com/YaoaY/dsh-conversation-accents.git"
   },
   "homepage": "https://github.com/YaoaY/dsh-conversation-accents#readme",
   "bugs": {
