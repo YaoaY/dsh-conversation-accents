@@ -1,0 +1,22 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "declaration": true,
+    "declarationMap": false,
+    "emitDeclarationOnly": true,
+    "noEmit": false,
+    "outDir": "dist",
+    "rootDir": "src"
+  },
+  "include": [
+    "src/accent-css.ts",
+    "src/index.ts",
+    "src/locales.ts",
+    "src/model.ts",
+    "src/palettes.ts",
+    "src/persistence.ts",
+    "src/schema.ts",
+    "src/think-markdown.ts",
+    "src/think-scheduler.ts"
+  ]
+}

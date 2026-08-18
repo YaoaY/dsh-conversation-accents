@@ -1,0 +1,11 @@
+import type { AccentPalette } from "./palettes.js";
+export declare const STYLE_PLUGIN: "dsh-conversation-accents";
+export declare const MARKDOWN_ACCENT_STYLE_KIND: "assistant-markdown-accents";
+export declare const TOOL_ACCENT_STYLE_KIND: "tool-accents";
+export declare const THINK_ACCENT_STYLE_KIND: "think-accents";
+export declare const THINK_MARKDOWN_STYLE_KIND: "think-markdown-layout";
+export declare const THINK_MARKDOWN_ATTRIBUTE: "data-dsh-think-markdown";
+export declare const TOOL_ACCENT_CSS: string;
+export declare const THINK_ACCENT_CSS: string;
+export declare const THINK_MARKDOWN_CSS: string;
+export declare function buildAccentCss(palette: AccentPalette | null): string;

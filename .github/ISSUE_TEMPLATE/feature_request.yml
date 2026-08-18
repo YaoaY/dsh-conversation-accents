@@ -1,0 +1,20 @@
+name: Feature request
+description: Propose a scoped plugin enhancement
+title: "[Feature]: "
+labels: [enhancement]
+body:
+  - type: textarea
+    attributes:
+      label: Problem
+      description: Describe the workflow or visual contract that needs improvement.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Proposed behavior
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: DSH compatibility impact
+      description: Note any DOM attributes, row structure, or Host API assumptions.

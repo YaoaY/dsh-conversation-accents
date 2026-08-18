@@ -1,0 +1,40 @@
+name: Bug report
+description: Report a reproducible plugin defect
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: checkboxes
+    attributes:
+      label: Privacy check
+      options:
+        - label: I removed private conversation text, paths, tokens, and screenshots.
+          required: true
+  - type: input
+    attributes:
+      label: Plugin version
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: DSH version or commit
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Browser and operating system
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Reproduction
+      description: Use fictional content and a disposable profile when possible.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Expected and actual behavior
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Sanitized console output

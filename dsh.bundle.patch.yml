@@ -1,0 +1,6 @@
+# dsh-conversation-accents: toggleable assistant, Tool call, and Think accents.
+- insert:
+    - id: conversation-accents
+      name: 'dsh-conversation-accents'
+      config:
+        defaultPreset: 'native'
