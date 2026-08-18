@@ -1,8 +1,7 @@
 # README Images
 
-Add the final README screenshots to this directory using these names:
+The README uses these screenshots:
 
-- `comparison.png`: native DSH and plugin effect comparison
+- `A1.png`, `A2.png`: native DSH examples
+- `B1.png`, `B2.png`: examples with Conversation Accents enabled
 - `settings.png`: Conversation Accents settings page
-
-Both `README.md` and `README_EN.md` already contain commented Markdown image tags for these paths. Replace each visible placeholder with its image tag after adding the file.

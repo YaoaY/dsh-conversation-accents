@@ -1,0 +1,62 @@
+name: Publish npm package
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish:
+    name: Test and publish
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v5
+
+      - name: Set up Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: 20
+          registry-url: https://registry.npmjs.org
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run tests
+        run: npm test
+
+      - name: Verify release version
+        if: startsWith(github.ref, 'refs/tags/')
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          set -eu
+          tag_version="${RELEASE_TAG#v}"
+          package_version="$(node -p "require('./package.json').version")"
+          test "$tag_version" = "$package_version"
+          case "$package_version" in
+            *-alpha.*|*-beta.*|*-rc.*) ;;
+            *) echo "Refusing to publish a non-prerelease version automatically: $package_version"; exit 1 ;;
+          esac
+
+      - name: Select npm dist-tag
+        id: npm-tag
+        run: |
+          set -eu
+          version="$(node -p "require('./package.json').version")"
+          case "$version" in
+            *-alpha.*) tag=alpha ;;
+            *-beta.*) tag=beta ;;
+            *-rc.*) tag=next ;;
+            *) tag=latest ;;
+          esac
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
+
+      - name: Publish to npm with Trusted Publishing
+        run: npm publish --access public --provenance --tag "${{ steps.npm-tag.outputs.tag }}"

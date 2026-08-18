@@ -8,12 +8,10 @@
 
 ## 效果对比
 
-> **截图占位：原生效果与插件效果对比**
-> 请将图片保存为 `docs/images/comparison.png`。
-
-<!-- 图片准备好后，用下面一行替换上方占位：
-![原生效果与插件效果对比](docs/images/comparison.png)
--->
+| 原生 DSH | 启用插件 |
+|---|---|
+| ![原生效果 1](docs/images/A1.png) | ![插件效果 1](docs/images/B1.png) |
+| ![原生效果 2](docs/images/A2.png) | ![插件效果 2](docs/images/B2.png) |
 
 ## 主要功能
 
@@ -28,12 +26,7 @@
 
 ## 设置页面
 
-> **截图占位：会话配色设置页面**
-> 请将图片保存为 `docs/images/settings.png`。
-
-<!-- 图片准备好后，用下面一行替换上方占位：
 ![会话配色设置页面](docs/images/settings.png)
--->
 
 安装后，在 DSH 的 **设置 -> 会话配色** 中可以：
 

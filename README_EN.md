@@ -8,12 +8,10 @@ Semantic colors for assistant replies, tool calls, and Think content in DSH Web.
 
 ## Comparison
 
-> **Screenshot placeholder: native DSH compared with the plugin**
-> Save the image as `docs/images/comparison.png`.
-
-<!-- Replace the placeholder above with this line when the image is ready:
-![Native DSH compared with the plugin](docs/images/comparison.png)
--->
+| Native DSH | Plugin enabled |
+|---|---|
+| ![Native effect 1](docs/images/A1.png) | ![Plugin effect 1](docs/images/B1.png) |
+| ![Native effect 2](docs/images/A2.png) | ![Plugin effect 2](docs/images/B2.png) |
 
 ## Features
 
@@ -28,12 +26,7 @@ The plugin changes conversation content only. It does not theme DSH navigation, 
 
 ## Settings
 
-> **Screenshot placeholder: Conversation Accents settings page**
-> Save the image as `docs/images/settings.png`.
-
-<!-- Replace the placeholder above with this line when the image is ready:
 ![Conversation Accents settings page](docs/images/settings.png)
--->
 
 After installation, open **Settings -> Conversation Accents** to:
 
