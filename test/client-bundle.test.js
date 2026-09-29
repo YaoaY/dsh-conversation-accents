@@ -124,13 +124,13 @@ function loadPlugin(handoff) {
     if (specifier === "@deepseek-ai/dsh-client-store") return runtimeStub();
     if (specifier === "@deepseek-ai/dsh-client-ui-primitives") {
       return {
-        IconBrowseOutline16: icon,
-        IconCheckOutline16: icon,
-        IconDownloadOutline16: icon,
-        IconPlusOutline16: icon,
-        IconRefreshOutline16: icon,
-        IconTrashOutline16: icon,
-        IconWarningOutline16: icon
+        IconBrowseOutlineRegular: icon,
+        IconCheckOutlineRegular: icon,
+        IconDownloadOutlineRegular: icon,
+        IconPlusOutlineRegular: icon,
+        IconRefreshOutlineRegular: icon,
+        IconTrashOutlineRegular: icon,
+        IconWarningOutlineRegular: icon
       };
     }
     throw new Error(`unexpected module: ${specifier}`);

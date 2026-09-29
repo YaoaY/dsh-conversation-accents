@@ -136,13 +136,13 @@ window.__ModuleLoader__.load({
       defineStore(declaration: Record<string, unknown>): unknown;
     };
     const {
-      IconBrowseOutline16,
-      IconCheckOutline16,
-      IconDownloadOutline16,
-      IconPlusOutline16,
-      IconRefreshOutline16,
-      IconTrashOutline16,
-      IconWarningOutline16
+      IconBrowseOutlineRegular,
+      IconCheckOutlineRegular,
+      IconDownloadOutlineRegular,
+      IconPlusOutlineRegular,
+      IconRefreshOutlineRegular,
+      IconTrashOutlineRegular,
+      IconWarningOutlineRegular
     } = require("@deepseek-ai/dsh-client-ui-primitives") as Record<string, IconComponent>;
 
     const h = React.createElement;
@@ -644,7 +644,7 @@ window.__ModuleLoader__.load({
           ]),
           h(ActionButton, {
             key: "new",
-            icon: IconPlusOutline16,
+            icon: IconPlusOutlineRegular,
             label: t("create"),
             disabled: settings.customPalettes.length >= MAX_CUSTOM_PALETTES,
             onClick: () => {
@@ -662,13 +662,13 @@ window.__ModuleLoader__.load({
         }, [
           h(ActionButton, {
             key: "import",
-            icon: IconBrowseOutline16,
+            icon: IconBrowseOutlineRegular,
             label: t("import"),
             onClick: () => fileRef.current?.click()
           }),
           h(ActionButton, {
             key: "export",
-            icon: IconDownloadOutline16,
+            icon: IconDownloadOutlineRegular,
             label: t("export"),
             onClick: () => downloadJson(props.exportCustom())
           }),
@@ -788,7 +788,7 @@ window.__ModuleLoader__.load({
           }, [
             h(ActionButton, {
               key: "delete",
-              icon: IconTrashOutline16,
+              icon: IconTrashOutlineRegular,
               label: t("delete"),
               danger: true,
               onClick: () => {
@@ -797,7 +797,7 @@ window.__ModuleLoader__.load({
             }),
             h(ActionButton, {
               key: "save",
-              icon: IconCheckOutline16,
+              icon: IconCheckOutlineRegular,
               label: t("save"),
               disabled: !draftValid,
               onClick: () => {
@@ -834,7 +834,7 @@ window.__ModuleLoader__.load({
             lineHeight: "18px"
           }
         }, [
-          h(IconWarningOutline16, { key: "icon", size: 16 }),
+          h(IconWarningOutlineRegular, { key: "icon", size: 16 }),
           h("span", { key: "text" }, `${t("contrast")}: ${warnings.map((field) => t(`field.${field}`)).join(", ")}`)
         ]) : null
       ]));
@@ -842,7 +842,7 @@ window.__ModuleLoader__.load({
       if (snapshot.persistence === "error") {
         controls.push(h(ActionButton, {
           key: "retry-host-save",
-          icon: IconRefreshOutline16,
+          icon: IconRefreshOutlineRegular,
           label: t("retry"),
           onClick: props.retryHost
         }));
